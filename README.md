@@ -12,4 +12,9 @@ Testes:
   - Valida listagem de usuários
   - Valida Exclusão de um usuário
 
+- Realiza testes para o verbo POST do endpoint de Produtos(/produtos)
+
+- Realiza a pesquisa de carrinhos que tenha produtos com quantidade total superior a 5
+
+
 
