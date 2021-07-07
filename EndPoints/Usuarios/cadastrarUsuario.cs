@@ -7,8 +7,11 @@ using RestSharp;
 class Cadastrar
 {
 
-    public string id = "";
+    //Variaveis
+    public string IdDoUsuario  { get; set; }
 
+    //Metodo: cadastrarUsuario
+    //Objetivo: Cadastrar usuarios guardando ID do ultimo usuário cadastrado
     public int cadastrarUsuario(string nome, string email, string password, string ehAdm)
     {
 
@@ -30,7 +33,7 @@ class Cadastrar
             string resultadoJSON = response.Content;
             char[] caracteresIgnorar = { ' ', ',', '.', ':', '\"', '\t', '\n', '{', '}', '_', '\r' };
             string[] array = resultadoJSON.Split(caracteresIgnorar, StringSplitOptions.RemoveEmptyEntries);
-            id = array[6];
+            IdDoUsuario = array[6];
         }
         return ((int)response.StatusCode);
     }

@@ -6,7 +6,11 @@ using RestSharp;
 
 class Editar
 {
+    //Variaveis
     String body = "";
+
+    //Metodo: editarUsuario
+    //Objetivo: Editar usuarios 
     public void editarUsuario(string nome, string email, string password, string ehAdm)
     {
         body = "{" + "\n" +
@@ -18,6 +22,8 @@ class Editar
 
     }
 
+    //Metodo: editarUsuario
+    //Objetivo: Editar usuarios por Id
     public int editarUsuarioPorId(string id)
     {
         var client = new RestClient("https://serverest.dev/usuarios" + "/" + id);

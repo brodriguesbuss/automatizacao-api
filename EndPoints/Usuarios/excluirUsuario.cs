@@ -5,6 +5,8 @@ using RestSharp;
 
 class Excluir
 {
+    //Metodo: excluirUsuarioPorId
+    //Objetivo: Excluir usuarios por Id
     public int excluirUsuarioPorId(string idUsuario)
     {
         string url = "https://serverest.dev/usuarios" + "/" + idUsuario;

@@ -5,6 +5,8 @@ using RestSharp;
 
 class Listar
 {
+    //Metodo: listarUsuarioPorID
+    //Objetivo: Listar usuario por Id
     public int listarUsuarioPorID(string idUsuario)
     {
         var client = new RestClient("https://serverest.dev/usuarios" + "/" + idUsuario);
@@ -17,7 +19,9 @@ class Listar
 
     }
 
-        public int listarUsuarioPorNome(string nome)
+    //Metodo: listarUsuarioPorNome
+    //Objetivo: Listar usuario por Nome
+    public int listarUsuarioPorNome(string nome)
     {
         var client = new RestClient("https://serverest.dev/usuarios" + "/" + nome);
         client.Timeout = -1;
